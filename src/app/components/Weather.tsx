@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
 export const Weather = () => {
 	function handleSubmit(e: React.SyntheticEvent) {
-		e.preventDefault()
+		e.preventDefault();
 	}
 
 	return (
@@ -11,5 +11,5 @@ export const Weather = () => {
 			<input type="text" />
 			<input type="submit" value="Search" />
 		</form>
-	)
-}
+	);
+};

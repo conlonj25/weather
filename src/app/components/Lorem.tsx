@@ -50,5 +50,5 @@ export const Lorem = () => {
 			ipsum dolor sit amet. Proin fermentum leo vel orci. Suscipit tellus mauris
 			a diam maecenas sed enim ut.
 		</p>
-	)
-}
+	);
+};
