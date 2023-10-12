@@ -10,9 +10,6 @@ export default function Home() {
 			<section className="bg-pink-50">
 				<Weather />
 			</section>
-			<section className="bg-pink-50">
-				<Lorem />
-			</section>
 			<footer className="bg-yellow-200">
 				<h1>Footer</h1>
 			</footer>
