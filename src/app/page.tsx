@@ -1,5 +1,5 @@
 import { Weather } from './components/Weather'
-import { Lorem } from './components/lorem'
+import { Lorem } from './components/Lorem'
 
 export default function Home() {
 	return (
