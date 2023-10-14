@@ -20,8 +20,6 @@ export const Weather = () => {
 		}
 	};
 
-	console.log('geocodingData', typeof geocodingData);
-
 	return (
 		<>
 			<form onSubmit={handleSubmit}>
