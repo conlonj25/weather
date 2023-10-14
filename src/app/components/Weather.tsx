@@ -42,7 +42,7 @@ export const Weather = () => {
 				/>
 				<input type="submit" value="Search" />
 			</form>
-			<p>{cityView}</p>
+			{cityView}
 		</>
 	);
 };
