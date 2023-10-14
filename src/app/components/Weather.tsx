@@ -20,16 +20,7 @@ export const Weather = () => {
 		}
 	};
 
-	const cityView = geocodingData.map((e, i) => {
-		return (
-			<ul key={i}>
-				<li>{e.name}</li>
-				<li>{e.lat}</li>
-				<li>{e.lon}</li>
-				<li>{e.country}</li>
-			</ul>
-		);
-	});
+	console.log('geocodingData', typeof geocodingData);
 
 	return (
 		<>
@@ -42,7 +33,7 @@ export const Weather = () => {
 				/>
 				<input type="submit" value="Search" />
 			</form>
-			{cityView}
+			<p>{JSON.stringify(geocodingData)}</p>
 		</>
 	);
 };
