@@ -2,6 +2,10 @@
 
 import { CityData, WeatherData } from '@/types';
 import { ChangeEvent, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Search } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
 export const Weather = () => {
 	const [query, setQuery] = useState('london');
@@ -44,17 +48,27 @@ export const Weather = () => {
 	};
 
 	return (
-		<>
-			<form onSubmit={handleSubmit}>
-				<label>City Name: </label>
-				<input
-					type="text"
-					value={query}
-					onChange={(e) => setQuery(e.target.value)}
-				/>
-				<input type="submit" value="Search" />
-			</form>
-			<p>{JSON.stringify(weather)}</p>
-		</>
+		<div className="flex flex-col gap-4">
+			<Card>
+				<CardContent className="flex justify-center items-center p-6">
+					<div className="flex w-full max-w-sm items-center space-x-2">
+						<Input
+							type="text"
+							placeholder="search city"
+							value={query}
+							onChange={(e) => setQuery(e.target.value)}
+						/>
+						<Button onClick={handleSubmit}>
+							<Search />
+						</Button>
+					</div>
+				</CardContent>
+			</Card>
+			<Card>
+				<CardContent>
+					<p>{JSON.stringify(weather)}</p>
+				</CardContent>
+			</Card>
+		</div>
 	);
 };
